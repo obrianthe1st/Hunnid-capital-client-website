@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Lato&family=League+Spartan:wght@300&family=Montserrat:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
+
+/*
+
+grayish - #D1DDE9
+dark blue - #111F28
+next gray - #3E4033
+kinda bluish = #A8B2BE
+orange - #E27145
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; 
+}
+
+
+  body {
+    font-family: 'Cinzel',sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.7;
+    color: #fff;
+    padding: 1.5rem; 
+}
+
+ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+section {
+    height: 90vh;
+    font-family: 'Cinzel', sans-serif;
+
+}
+
+
+
+/*heading*/
+
+.heading {
+    background-image: linear-gradient(to right bottom, #d1dde998, #a8b2beaf), url('img/buildings-205986_1920.jpg');
+    background-size: cover;
+    background-position: top;
+    border-top: 5px solid #E27145;
+    border-left: 5px solid #E27145;
+}
+
+
+.heading__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.heading__container h1{
+    animation: moveInLeft 3s ease-in;
+}
+
+
+.heading__container h3{
+    animation: moveInRight 3s ease-in;
+
+
+}
+
+
+
+
+.heading__container h1{
+    font-weight: 300;
+}
+
+.heading__container h3{
+    font-weight: 300;
+}
+
+.heading__container--btn button{
+    font-size: 2rem;
+    padding: 0.8rem;
+    border-radius: 5rem;
+    margin-top: 2rem;
+    animation: moveInBottom 3s ease-in;
+    transition: all 0.5s;
+    
+}
+
+.heading__container--btn button:active{
+    transform: translateY(-2rem);
+    background-color: black;
+    color: white;
+}
+
+.heading__container--btn button:hover{
+    background-color: black;
+    color: white;
+
+}
+
+
+
+.heading__img {
+    margin-left: 0.9rem;
+}
+
+
+@keyframes moveInLeft {
+    /*This is the initial state, when the animation starts*/
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+      /*translateX we want to translate from the X-direction*/ }
+    /*
+      60% {
+          transform: rotate(180deg);
+      }
+  */
+    80% {
+      transform: translateX(20px); }
+    /*This is the ending state, when the animation ends*/
+    100% {
+      opacity: 1;
+      transform: translate(0);
+      color: white; } }
+  
+  @keyframes moveInRight {
+    /*This is the initial state, when the animation starts*/
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+      /*translateX we want to translate from the X-direction*/ }
+    80% {
+      transform: translateX(-20px); }
+    /*This is the ending state, when the animation ends*/
+    100% {
+      opacity: 1;
+      transform: translate(-100); } }
+  
+  @keyframes moveInBottom {
+    /*This is the initial state, when the animation starts*/
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+      /*translateY we want to translate from the Y-direction push 100 pixels down*/ }
+    80% {
+      transform: translateY(-20px);
+      /*When it's at 80% through the animation time I want to carry it then bring it up a bit then once it reaches 100% it will slide back down*/ }
+    /*This is the ending state, when the animation ends*/
+    100% {
+      color: white;
+      opacity: 1;
+      transform: translate(-100); } }
+
+/*
+About section
+*/
+
+.about__section {
+    background-color: #D1DDE9;
+    margin-top: -17vh;
+    border-bottom: 0.5rem solid #E27145;
+    border-right: 0.5rem solid #E27145;    
+    height: 100vh;
+    position:relative;
+    clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
+
+
+}
+
+
+.about__section--container{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:5rem;
+}
+
+.about__section--container h2{
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+
+
+.about__section--container p{
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'EB Garamond', sans-serif;
+}
+
+@media(max-width: 768.45px) {
+    .about__section--container{
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin-top:12rem;
+
+    }
+
+
+}
+
+
+@media(max-width: 991.45px) {
+
+    .about__section--container{
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:2rem;
+
+    }
+
+    .about__section--container h2{
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    
+    
+    
+    .about__section--container p{
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: 'EB Garamond', sans-serif;
+    }
+    
+}
+
+/*
+Global section
+*/
+
+
+
+.global__section {
+    color: white;
+    height: 100vh;
+    background-image: url(img/map-of-the-world-2401458_1920.jpg);
+    width: 100%;
+    position: relative;
+    background-position: top;
+    background-size: cover;
+}
+
+
+
+.global__section--container{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:10rem;
+}
+
+
+
+.global__section--heading{
+    font-weight: 200;
+    padding: 0.4rem;
+    background-color: #D1DDE9;
+    color: black;
+    transition: all 0.6s;
+
+
+}
+
+.global__section--heading h1{
+    background-color: #111F28;
+    color: #2BA7B9;
+}
+
+.global__section--heading p{
+    background-color: #111F28;
+    color: #2BA7B9;
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 1.5rem;
+
+}
+
+.global__section--heading:hover{
+    transform: scaleY(1.5);
+}
+
+.global__section--planet{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+@keyframes animateLoader {
+    0%{
+        transform: rotate(0deg)
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.earth {
+    margin:0 auto;
+    width: 20rem;
+    height: 20rem;
+    background: url(img/earth.jpg);
+    border-radius: 50%;
+    background-size:cover;
+    box-shadow: inset 0 0 20px #111F28,
+                inset 0 0 120px #111F28;
+    animation: animateEarth 20s linear infinite;
+}
+
+
+@keyframes animateEarth {
+
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 162.5%;
+    }
+    
+}
+
+@media (max-width: 991.91px) {
+    
+.global__section--container{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:1rem;
+}
+
+
+
+}
+
+
+@media (max-width: 592.22px) {
+    
+    .global__section--container{
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top:-1rem;
+    }
+    
+    .earth {
+        margin:0 auto;
+        width: 10rem;
+        height: 10rem;
+        background: url(img/earth.jpg);
+        border-radius: 50%;
+        background-size:cover;
+        box-shadow: inset 0 0 20px #111F28,
+                    inset 0 0 120px #111F28;
+        animation: animateEarth 20s linear infinite;
+    }
+
+    .global__section--heading h1{
+        background-color: #111F28;
+        color: #2BA7B9;
+        font-size: 1.5rem;
+    }
+    
+    .global__section--heading p{
+        background-color: #111F28;
+        color: #2BA7B9;
+        font-family: 'EB Garamond', sans-serif;
+        font-size: 1.3rem;
+    
+    }
+    
+
+    
+    }
+    
+
+
+
+
+.global__section--container .global__section--planet{
+    margin-bottom: 2rem;
+}
+
+ 
+
+/*Philosophy Section*/
+.philosophy__section{
+    background-image:  url(img/city\ life\ 3.png);
+    background-position: center;
+    background-size: cover;
+    background-color: #D1DDE9;
+    border-top: 5px solid #E27145;
+    border-bottom: 5px solid #E27145;
+    position: relative;
+}
+
+
+.philosophy__section--img{
+    margin: 2rem;
+}
+
+.philosophy__section--btn{
+    position: relative;
+    top:8rem;
+    left:15rem;
+    background-color: #D1DDE9;
+}
+
+
+
+.philosophy__section--btn button{
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0.8rem;
+    border-radius: 5rem;
+    margin-top: 2rem;
+    transition: all 0.5s;
+    background-color: #D1DDE9;
+    border: none;
+}
+
+.philosophy__section--btn button:active{
+    transform: translateY(-2rem);
+    background-color: #E27145;
+    color: black;
+}
+
+.philosophy__section--btn button:hover{
+    background-color: #E27145;
+    color: black;
+
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); 
+         background-color: #E27145;}
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+
+@media(max-width: 1114.44px) {
+    
+
+    .philosophy__section--btn{
+        position: relative;
+        top:8rem;
+        left:5rem;
+        background-color: #D1DDE9;
+    }
+
+    
+}
+
+@media(max-width: 824.44px) {
+    
+
+    .philosophy__section--btn{
+        position: relative;
+        top:8rem;
+        left:-5rem;
+        background-color: #D1DDE9;
+    }
+
+    
+}
+
+@media(max-width: 576.44px) {
+    
+
+    .philosophy__section--btn{
+        position: relative;
+        top:8rem;
+        left:3rem;
+        background-color: #D1DDE9;
+    }
+
+    
+}
+
+
+@media(max-width: 603.44px) {
+    
+
+    .philosophy__section--btn{
+        position: relative;
+        top:8rem;
+        left:3rem;
+        background-color: #D1DDE9;
+    }
+
+    
+}
+
+
+
+
+
+/*Footer section*/
+
+.footer__section{
+    font-family: 'Cinzel',sans-serif;
+    font-family: 300;
+
+}
+
+.section__links {
+    background-image:  linear-gradient(to right bottom, #d1dde998, #a8b2beaf), url(img/buildings-205986_1920.jpg);
+    background-position: top;
+    background-size: cover;
+    padding:2rem;
+}
+
+/*Modal Header*/
+.modal-data{
+    background-color: #111F28;
+    color:white;
+}
+
+.modal-body-background {
+    background-image: linear-gradient(to right bottom, #d1dde998, #a8b2beaf), url(img/buildings-205986_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 1.2rem;
+}
+
+.modal-body-background label{
+    font-family: "EB Garamond", sans-serif;
+    font-size: 1.5rem;
+}
+
+.modal-footer button{
+    background-color: #111F28;
+    font-size: 1.5rem;
+    color:white
+}
